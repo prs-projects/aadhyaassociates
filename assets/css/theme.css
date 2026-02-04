@@ -1,0 +1,32 @@
+:root {
+  /* https://www.softr.io/tools/svg-shape-generator */
+  /* https://www.blobmaker.app/ */
+  --sample-1: rgb(0, 0, 0);
+  --sample-2: rgb(255, 255, 255);
+  --sample-3: rgb(1, 35, 64);
+  --sample-4: rgb(89, 89, 89);
+  --sample-5: rgb(242, 242, 242);
+  --sample-6: rgb(217, 65, 30);
+  --sample-7: rgb(242, 110, 34);
+  --sample-8: rgb(242, 134, 39);
+  --sample-9: rgb(3, 76, 140);
+  --sample-10: rgb(4, 138, 191);
+  --sample-11: rgb(160, 219, 242);
+  --basic-dark: 0, 0, 0;
+  --basic-light: 255, 255, 255;
+  --gray-dark: 1, 35, 64;
+  --gray-none: 89, 89, 89;
+  --gray-light: 242, 242, 242;
+  --orange-dark: 217, 65, 30;
+  --orange-none: 242, 110, 34;
+  --orange-light: 242, 134, 39;
+  --blue-dark: 3, 76, 140;
+  --blue-none: 4, 138, 191;
+  --blue-light: 160, 219, 242;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/*# sourceMappingURL=theme.css.map */

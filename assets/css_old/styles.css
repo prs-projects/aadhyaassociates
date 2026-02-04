@@ -1,0 +1,177 @@
+header.header .header-secondary .navbar .header-social-links {
+    z-index: 1;
+    background-color: rgb(var(--c-color-dark-b));
+}
+header.header .header-secondary .navbar .header-social-links .header-social-links-bg{
+    position: absolute;
+    left: -35px;
+    top: 0px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: -1;
+}
+header.header .header-secondary .navbar .header-social-links .header-social-links-bg svg{
+    width: 100px;
+    height: 100px;
+}
+
+header.header .header-secondary {
+    background-color: rgba(var(--c-color-light-c) / 20%);
+}
+
+header.header .header-secondary .navbar > * {
+    font-size: small;
+}
+
+.btn-shade-light-a {
+    background-color: rgba(var(--c-color-light-a));
+    color: rgba(var(--c-color-dark-a));
+}
+.btn-shade-c {
+    background-color: rgba(var(--c-color-dark-c));
+    color: rgba(var(--c-color-light-a));
+}
+
+@media (min-width: 992px) {
+    header.header .header-primary .navbar .navbar-nav .nav-item .nav-link {
+        border-right: 1px solid var(--bs-border-color);
+    }
+    header.header .header-primary .navbar .navbar-nav .nav-item:last-of-type .nav-link {
+        border-right: none;
+    }
+}
+
+@media (min-width: 992px) {
+    header.header .header-primary .navbar .header-social-links {
+        border-left: 4px solid rgba(var(--bs-warning-rgb));
+    }
+}
+
+/* Carousel background blur */
+.carousel-item {
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+    min-height: 400px;
+    max-height: 1000px;
+    z-index: 1;
+}
+
+.carousel-item-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgb(255 255 255 / 80%), rgb(255 255 255 / 80%)), url(https://img.freepik.com/free-photo/tourist-carrying-baggage_23-2151747400.jpg?t=st=1770078097~exp=1770081697~hmac=8066737…&w=2000);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(6px);
+    transform: scale(1.05); /* avoid edge artifacts from blur */
+    will-change: filter, transform;
+}
+
+@media (max-width: 576px) {
+    .carousel-item-bg {
+        filter: blur(4px);
+        transform: scale(1.03);
+    }
+}
+
+
+/* content sits above the blurred background */
+.carousel-item .row {
+    position: relative;
+    z-index: 2;
+}
+
+/* left content styling */
+.content {
+    color: #ffffff;
+    padding: 3rem 2rem;
+}
+.content .tagline {
+    display: inline-block;
+    /* background: rgba(var(--c-color-dark-c) / 10%); */
+    background: rgba(255 255 255 / 50%);
+    color: rgba(var(--c-color-dark-c));
+    font-weight: 600;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: .8rem;
+}
+.content .heading {
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: rgba(var(--c-color-dark-b));
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+}
+.content .desc {
+    color: rgba(var(--c-color-dark-b) / 60%);
+    font-size: 1.05rem;
+    max-width: 44rem;
+    margin-bottom: 1.25rem;
+}
+
+/* CTA buttons */
+.content .btn {
+    font-weight: 600;
+    padding: .65rem 1.1rem;
+    border-radius: 999px;
+}
+.content .btn.btn-light {
+    color: #023e73;
+}
+
+/* right media column: use image as decorative card */
+.media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.media::before {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 320px;
+    border-radius: 14px;
+    background-image: url("https://img.freepik.com/free-photo/tourist-carrying-baggage_23-2151747400.jpg?t=st=1770078097~exp=1770081697~hmac=8066737…&w=2000"); /* add slider-right.jpg in assets/images */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 18px 40px rgba(2, 62, 115, 0.35);
+    transform: translateY(0);
+}
+
+/* small-screen adjustments */
+@media (max-width: 991px) {
+    .carousel-item { min-height: 420px; }
+    .content .heading { font-size: 1.7rem; }
+    .media::before { max-width: 320px; height: 220px; }
+    .content { padding: 2rem 1.25rem; }
+}
+
+/* extra polish */
+/* .carousel-control-prev, .carousel-control-next {
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+} */
+/* .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+}
+.carousel-indicators .active {
+    background: #ffffff;
+    transform: scale(1.15);
+} */

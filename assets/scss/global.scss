@@ -1,0 +1,46 @@
+@use "variables" as *;
+
+
+@each $weight in $font_weights {
+    @each $style in $font_styles {
+        .font-#{$weight}-#{$style} {
+            font-weight: $weight;
+            font-style: $style;
+        }
+    }
+}
+
+@each $shade in $shades {
+    @each $mode in $modes {
+        @each $opacity in $opacities {
+            .color-#{$shade}-#{$mode}-#{$opacity} {
+                color: rgba(var(--#{$shade}-#{$mode}), #{$opacity / 100}) !important;
+            }
+            .bg-#{$shade}-#{$mode}-#{$opacity} {
+                background-color: rgba(var(--#{$shade}-#{$mode}), #{$opacity / 100}) !important;
+            }
+            .border-#{$shade}-#{$mode}-#{$opacity} {
+                border-color: rgba(var(--#{$shade}-#{$mode}), #{$opacity / 100}) !important;
+            }
+        }
+    }
+}
+
+@each $size in $square_sizes {
+    @each $radius in $square_radiuss {
+        .square-#{$size}-#{$radius} {
+            width: #{$size}px;
+            height: #{$size}px;
+            border-radius: #{$radius}px;
+        }
+    }
+}
+
+.theme-btn:hover {
+    opacity: 0.85;
+}
+@each $radius in $btn_radiuss {
+    .theme-btn-#{radius} {
+        border-radius: #{radius}px;
+    }
+}

@@ -1,0 +1,22 @@
+:root{
+
+    /* Adobe:
+        #023E73
+        #048ABF
+        #F26B1D
+        #D94423
+        #F2F2F2
+    Canva:
+        #0d4e87
+        #dae3e4
+        #d6833b
+        #a9603c */
+    /* https://www.softr.io/tools/svg-shape-generator */
+    /* https://www.blobmaker.app/ */
+    --c-color-dark-a: 13 78 135;
+    --c-color-dark-b: 2 62 115;
+    --c-color-dark-c: 217 68 35;
+    --c-color-light-a: 255 255 255;
+    --c-color-light-b: 218 227 228;
+    --c-color-light-c: 4 138 191;
+}
